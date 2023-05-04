@@ -1,0 +1,377 @@
+img{
+    /* width: 400px;  */
+    display: grid;
+}
+
+/*.backgroundImg{
+    background-image:  url("../images/IMG_2957.JPG");
+    /* linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), */
+   /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* filter: brightness(50%); 
+} */
+
+*{
+    font-family: "Verdana", "Arial";
+    /* color: white; */
+}
+
+.skip{
+    position: absolute;
+    top: -40px;
+}
+
+.skip:focus{
+    position: absolute;
+    top: 20px;
+}
+
+.h1{
+    text-align: center;
+    font-size: 25px;
+}
+
+/* home page */
+.homeHeader{
+    font-size: 20px;
+}
+.homePara{
+    /* background: #ffd5bd;
+    background-color: rgba(255, 213, 189, 0.5); */
+    padding-bottom: 55px;
+    /* border-radius: 6px; */
+    width: 100%;
+}
+
+.headshot{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.homeHeader, .homePara{
+    padding: 0px 60px;
+}
+/* end home */
+
+/* nav */
+.active{
+    background-color: #ffd5bd;
+    padding: 3px;
+    border-bottom: 4px solid;
+    border-radius: 5px 5px 0px 0px;
+    border-color: #fa6814;
+}
+
+.navLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navItem{
+    padding-top: 7px;
+}
+
+.navItem a:visited{
+    color: black;
+    
+}
+.navItem a{
+    text-decoration: none;
+}
+/* end nav */
+
+
+/* about page */
+
+.aboutHeader{
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.aboutPara{
+    padding: 0px 60px;
+}
+
+/* about page flex styling */
+
+.containerAll{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.containerAll img{
+    width: 450px;
+    /* width: 100%; */
+    height: 450px;
+    /* height: 100%; */
+    object-fit: cover;
+    /* flex-grow: inherit; */
+    padding-bottom: 15px;
+}
+
+.weightlifting, .geography, .music, .crochet, .coffee, .games, .hiking, .travelling, .museums{
+    /* display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr; */
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 225px;
+    flex-grow: 1;
+    padding: 30px;
+    padding-top: 14px;
+    margin: 10px;
+}
+
+/* academics page */
+.academicsPara{
+    padding: 0px 60px;
+}
+.academicsPara h2{
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* .majors, .awards, .involvement{
+    background-color: #B3D7F4;
+    padding: 5px;
+    border-radius: 6px;
+} */
+
+/* grid */
+.academicsContainer{
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr 1fr 1fr 1fr 1fr 30px;
+    row-gap: 15px;
+    column-gap: 10px;
+    justify-items: stretch;
+}
+
+.firstWindowImage, .secondWindowImage{
+    grid-column: 2/8;
+    grid-row: 1/2;
+}
+
+.firstWindowImage, .secondWindowImage{
+    height: 400px;
+    object-fit: cover;
+}
+
+.secondWindowImage{
+    grid-row: 3/4;
+}
+
+.secondRowFirstHalfColumn, .secondRowLastHalfColumn{
+    grid-column: 2/5;
+    grid-row: 2/3;
+}
+
+.secondRowLastHalfColumn{
+    grid-column: 5/8;
+}
+
+.firstOfThree, .secondOfThree, .thirdOfThree{
+    grid-column: 2/4;
+    grid-row: 4/5;
+}
+
+.secondOfThree{
+    grid-column: 4/6;
+}
+
+.thirdOfThree{
+    grid-column: 6/8;
+}
+
+.lastRowFirstHalfColumn, .lastRowLastHalfColumn{
+    grid-column: 2/5;
+    grid-row: 5/6;
+}
+
+.lastRowLastHalfColumn{
+    grid-column: 5/8;
+}
+/* end grid */
+/* end academics */
+
+/* experience page */
+.experiencePara h2{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.experiencePara h3{
+    font-weight: bold;
+}
+
+.experiencePara h4{
+    font-style: italic;
+}
+
+/* .invensity, .stevenson, .mcmp, .emr{
+    background-color: #fce3d4;
+    padding: 5px;
+    border-radius: 6px;
+} */
+.experiencePara{
+    padding: 0px 60px;
+}
+
+
+/* tablet viewport */
+@media screen and (min-width: 768px){
+    .navLinks{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navItem{
+        padding: 10px;
+    }
+
+    .academicsPara{
+        padding: 0px 200px;
+    }
+
+    .firstWindowImage{
+        grid-column: 2/5;
+        grid-row: 1/2;
+        height: 100%;
+    }
+
+    .secondRowFirstHalfColumn{
+        grid-column: 5/8;
+        grid-row: 1/2;
+    }
+
+    .secondRowLastHalfColumn{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .secondWindowImage{
+        grid-column: 4/6;
+        grid-row: 2/3;
+    }
+
+    .firstOfThree{
+        grid-column: 6/8;
+        grid-row: 2/3;
+    }
+
+    .secondOfThree{
+        grid-column: 2/5;
+        grid-row: 3/4;
+    }
+
+    .thirdOfThree{
+        grid-column: 5/8;
+        grid-row: 3/4;
+    }
+
+    .lastRowFirstHalfColumn{
+        grid-column: 2/5;
+        grid-row: 4/5;;
+    }
+
+    .lastRowLastHalfColumn{
+        grid-column: 5/8;
+        grid-row: 4/5;
+    }
+
+    .secondRowLastHalfColumn, .firstOfThree{
+        object-fit: cover;
+        height: 100%;
+    }
+
+    /* about page */
+    .containerAll{
+        flex-direction: row;
+    }
+
+    .containerAll img{
+        height: 270px;
+        width: 270px;
+    }
+
+    .weightlifting, .geography, .music, .crochet, .coffee, .games, .hiking, .travelling, .museums{
+        flex-basis: 300px;
+    }
+    /* home page */
+    .homeHeader, .homePara{
+        padding: 0px 200px;
+    }
+
+    /* experience page */
+    .experiencePara{
+        padding: 0px 175px;
+    }
+
+    .aboutPara{
+        padding: 0px 80px;
+    }
+}
+
+/* desktop viewport */
+@media screen and (min-width: 1024px){
+/* academics */
+    .firstWindowImage, .secondWindowImage, .thirdOfThree{
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+
+    .secondRowFirstHalfColumn, .firstOfThree, .lastRowFirstHalfColumn{
+        grid-column: 4/6;
+        grid-row: 1/2;
+    }
+
+    .secondRowLastHalfColumn, .secondOfThree, .lastRowLastHalfColumn{
+        grid-column: 6/8;
+        grid-row: 1/2;
+    }
+
+    .secondWindowImage, .firstOfThree, .secondOfThree{
+        grid-row: 2/3;
+        height: 100%
+    }
+
+    .thirdOfThree, .lastRowFirstHalfColumn, .lastRowLastHalfColumn{
+        grid-row: 3/4;
+    }
+
+    /* about */
+    .weightlifting, .geography, .music, .crochet, .coffee, .games, .hiking, .travelling, .museums{
+        align-items: center;
+        /* flex-direction: column; */
+    }
+
+    .containerAll{
+        align-items: stretch;
+    }
+
+    .homeHeader, .homePara{
+        padding: 0px 300px;
+    }
+
+    .experiencePara, .academicsPara{
+        padding: 0px 250px;
+    }
+
+    .aboutPara{
+        padding: 0px 150px;
+    }
+}
